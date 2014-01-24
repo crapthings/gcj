@@ -1,0 +1,16 @@
+<template name="website-module-notices">
+
+	<div class="box">
+		<h5>
+			<a href="javascript:;">通知公告</a>
+		</h5>
+		<ul class="list-unstyled nmg bordered" style="font-size: 13px;">
+			{{#each notices}}
+				<li>
+					<a href="">{{truncate title 18}}</a>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+
+</template>
