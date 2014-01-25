@@ -1,0 +1,15 @@
+<template name="backend-layout">
+
+	<div class="backend-wrapper">
+		<div class="backend">
+			{{> backend-topnav}}
+			{{> backend-leftnav}}
+			<div class="backend-main-wrapper">
+				<div class="backend-main">
+					{{yield}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
