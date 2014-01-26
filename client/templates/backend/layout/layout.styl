@@ -8,6 +8,10 @@ $leftnavWidth = 120px
 
 .backend
 	padding-top $topnavHeight
+	& a
+		color #333
+		&:hover
+			color #000
 
 .backend-topnav
 	position fixed
@@ -29,7 +33,19 @@ $leftnavWidth = 120px
 	top $topnavHeight
 	width $leftnavWidth
 	height 100%
+	background-color #ecf0f1
+	& > ul
+		list-style none
+		margin 0
+		padding 0
+		& > li
+			& > a
+				display block
+				padding 6px 0
+				text-align center
 
 .backend-main-wrapper
 	margin-left $leftnavWidth
-	border-left 1px solid #ecf0f1
+
+.backend-main
+	padding 15px

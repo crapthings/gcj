@@ -6,6 +6,10 @@
 			{{> backend-leftnav}}
 			<div class="backend-main-wrapper">
 				<div class="backend-main">
+					<h1 class="page-title">{{page.title}}</h1>
+					<div class="page-nav">
+						{{yield 'nav'}}
+					</div>
 					{{yield}}
 				</div>
 			</div>

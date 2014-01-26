@@ -1,17 +1,19 @@
 <template name="website-module-unknown">
 
 	<div class="box">
-		<h5>
+		<div class="box-header">
 			<a href="">新闻动态</a>
-		</h5>
-		<ul class="bordered" style="font-size: 13px;">
-			{{#each news}}
-				<li class="clearfix">
-					<a href="" class="pull-right text-xs">02/24</a>
-					<a href="">· {{title}}</a>
-				</li>
-			{{/each}}
-		</ul>
+		</div>
+		<div class="box-body pd10 bordered">
+			<ul>
+				{{#each news}}
+					<li class="clearfix">
+						<a href="" class="pull-right text-xs">02/24</a>
+						<a href="">· {{title}}</a>
+					</li>
+				{{/each}}
+			</ul>
+		</div>
 	</div>
 
 </template>
