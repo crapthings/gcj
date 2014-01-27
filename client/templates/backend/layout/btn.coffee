@@ -3,4 +3,7 @@ Template['btn-submit'].events
 		helper = ($ '[data-helper]').data()
 		e.preventDefault()
 		options = form2js helper.form
-		Meteor.call helper.method, options
+		if @_id
+			Meteor.call helper.method, options, @_id
+		else
+			Meteor.call helper.method, options

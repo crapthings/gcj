@@ -6,3 +6,6 @@ Helper 'activeFor', (path) ->
 
 Helper 'truncate', (context, length) ->
 	return context.truncate length
+
+Helper 'formatDate', (date) ->
+	return moment(date).format('YYYY/MM/DD')

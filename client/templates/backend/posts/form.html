@@ -2,10 +2,10 @@
 
 	<form id="postForm" action="javascript:;">
 		<div class="form-group">
-			<input type="text" name="title" class="form-control" placeholder="标题" required autofocus>
+			<input type="text" name="title" class="form-control" value="{{title}}" placeholder="标题" required autofocus>
 		</div>
 		<div class="form-group">
-			<textarea name="content" class="form-control" rows="5" placeholder="内容" required></textarea>
+			<textarea name="content" class="form-control" rows="5" placeholder="内容" required>{{content}}</textarea>
 		</div>
 		<div class="form-group">
 			{{> btn-submit}}

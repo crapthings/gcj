@@ -8,6 +8,9 @@ Router.map ->
 		data: ->
 			page:
 				title: '网站内容'
+			postsList: Posts.find {},
+				sort:
+					timestamp: -1
 
 	@route 'backend-posts-new',
 		layoutTemplate: 'backend-layout',
@@ -18,4 +21,15 @@ Router.map ->
 				to: 'nav'
 		data: ->
 			page:
-				title: '添加新内容'
+				title: '添加内容'
+
+	@route 'backend-posts-edit',
+		layoutTemplate: 'backend-layout'
+		path: '/backend/posts/edit/:_id'
+		yieldTemplates:
+			'backend-posts-nav':
+				to: 'nav'
+		data: ->
+			page:
+				title: '编辑内容'
+			post: Posts.findOne @params._id

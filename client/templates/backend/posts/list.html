@@ -1,0 +1,18 @@
+<template name="backend-posts-list">
+
+	<ul class="list-unstyled">
+		{{#each postsList}}
+			{{> backend-posts-item}}
+		{{/each}}
+	</ul>
+
+</template>
+
+<template name="backend-posts-item">
+
+	<li class="clearfix">
+		<span class="pull-right">{{formatDate createdAt}}</span>
+		<a href="{{pathFor 'backend-posts-edit'}}">{{title}}</a>
+	</li>
+
+</template>
