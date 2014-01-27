@@ -1,0 +1,17 @@
+<template name="backend-posts-nav">
+
+	<ul class="list-inline">
+		<li>
+			<a href="{{pathFor 'backend-posts-new'}}">
+				<i class="fa fa-plus"></i> 添加新内容
+			</a>
+		</li>
+	</ul>
+
+	<ul class="nav nav-tabs">
+		<li class="{{activeFor 'backend-posts'}}">
+			<a href="{{pathFor 'backend-posts'}}">内容</a>
+		</li>
+	</ul>
+
+</template>
