@@ -7,7 +7,7 @@
 		<div class="box-figure" style="background-image: url('/notice01.jpg');"></div>
 		<div class="box-body pd10 bordered">
 			<ul>
-				{{#each notices}}
+				{{#each latestPosts '通知公告' 6}}
 					<li>
 						<a href="">{{truncate title 18}}</a>
 					</li>
