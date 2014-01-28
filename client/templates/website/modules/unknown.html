@@ -6,10 +6,10 @@
 		</div>
 		<div class="box-body pd10 bordered">
 			<ul>
-				{{#each news}}
+				{{#each latestPosts '新闻动态' 10}}
 					<li class="clearfix">
-						<a href="" class="pull-right text-xs">02/24</a>
-						<a href="">· {{title}}</a>
+						<a href="" class="pull-right text-xs">{{formatDate createdAt 'YYYY/MM/DD'}}</a>
+						<a href="">· {{truncate title 22}}</a>
 					</li>
 				{{/each}}
 			</ul>

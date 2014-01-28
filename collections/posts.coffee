@@ -13,3 +13,11 @@ Meteor.methods
 	editPost: (options, postId) ->
 		Posts.update postId,
 			$set: options
+
+	removePost: (postId) ->
+		Posts.remove postId
+
+if Meteor.isServer
+
+	Meteor.publish 'posts', (options) ->
+		Posts.find options

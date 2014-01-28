@@ -7,5 +7,9 @@ Helper 'activeFor', (path) ->
 Helper 'truncate', (context, length) ->
 	return context.truncate length
 
-Helper 'formatDate', (date) ->
-	return moment(date).format('YYYY/MM/DD')
+Helper 'formatDate', (date, format) ->
+	return moment(date).format(format)
+
+Helper 'checkRadio', (key, value) ->
+	if @[key] is value
+		return 'checked'

@@ -5,6 +5,14 @@
 			<input type="text" name="title" class="form-control" value="{{title}}" placeholder="标题" required autofocus>
 		</div>
 		<div class="form-group">
+			<label for="post-category-news" class="radio-inline">
+				<input type="radio" name="category" id="post-category-news" value="新闻动态" {{checkRadio 'category' '新闻动态'}}> 新闻动态
+			</label>
+			<label for="post-category-notice" class="radio-inline">
+				<input type="radio" name="category" id="post-category-notice" value="通知公告" {{checkRadio 'category' '通知公告'}}> 通知公告
+			</label>
+		</div>
+		<div class="form-group">
 			<textarea name="content" class="form-control" rows="5" placeholder="内容" required>{{content}}</textarea>
 		</div>
 		<div class="form-group">

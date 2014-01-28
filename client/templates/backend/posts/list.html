@@ -1,18 +1,40 @@
 <template name="backend-posts-list">
 
-	<ul class="list-unstyled">
-		{{#each postsList}}
-			{{> backend-posts-item}}
-		{{/each}}
-	</ul>
+	<table class="fit-width">
+		<thead>
+			<tr>
+				<td>分类</td>
+				<td>标题</td>
+				<td>发布日期</td>
+				<td>管理</td>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each postsList}}
+				{{> backend-posts-item}}
+			{{/each}}
+		</tbody>
+	</table>
 
 </template>
 
 <template name="backend-posts-item">
 
-	<li class="clearfix">
-		<span class="pull-right">{{formatDate createdAt}}</span>
-		<a href="{{pathFor 'backend-posts-edit'}}">{{title}}</a>
-	</li>
+	<tr>
+		<td>
+			<a href="">{{category}}</a>
+		</td>
+		<td>
+			<a href="{{pathFor 'backend-posts-edit'}}">{{title}}</a>
+		</td>
+		<td>
+			{{formatDate createdAt 'YYYY-MM-DD'}}
+		</td>
+		<td>
+			<a href="javascript:;" class="remove">
+				<i class="fa fa-trash-o"></i>
+			</a>
+		</td>
+	</tr>
 
 </template>
