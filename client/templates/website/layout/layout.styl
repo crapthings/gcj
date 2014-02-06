@@ -12,6 +12,7 @@
 
 .website-topnav-wrapper
 	position relative
+	z-index 999
 	// margin-bottom 15px
 	height 240px
 	line-height @height
@@ -44,6 +45,14 @@
 			border-radius 4px 4px 0 0
 			background-color transparent
 			color navy
+
+.website-topnav-fixed
+	position fixed
+	top 0
+	left 0
+	width 100%
+	background-color rgba(255, 255, 255, .4)
+	background-image linear-gradient(hsla(0, 0%, 100%, 1), hsla(0, 0%, 70%, .7))
 
 .website-infobar-wrapper
 	font-size 12px
